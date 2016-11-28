@@ -148,14 +148,3 @@ def kNN(gallery_set, probe_set, meanface, eigenfaces, gallery_labels, probe_labe
 
 	print "Prinicipal Components = {}; ttl time = {:.5f}s; Percent correct = {:.2f}%".format(numPCA,end-start,float(correct)/len(probe_labels)*100)
 	return float(correct)/len(probe_labels)*100, end-start
-
-def create_cluster_arrays(data,klbls):
-	ks = np.unique(klbls)
-	cluster_list = []
-	for i in range(0,len(ks)): # iterate over each cluster
-		tmp = []
-		for j in range(0,len(data)):
-			if klbls[j] == ks[i]:
-				tmp.append(data[j])
-		cluster_list.append(np.asarray(tmp))
-	return cluster_list

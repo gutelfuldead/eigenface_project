@@ -7,23 +7,23 @@ import re
 from timeit import default_timer as timer
 
 # To suppress outputs change to False
-PART1 = False
-# PART1 = True
+PART1 = True
+# PART1 = False
 
-PART2 = False
-# PART2 = True
+PART2 = True
+# PART2 = False
 
-PART3 = False
-# PART3 = True
+PART3 = True
+# PART3 = False
 
 PART4a5 = True
 # PART4a5 = False
 
-# showplots = True
-showplots = False
+showplots = True
+# showplots = False
 
-saveplots = True
-# saveplots = False
+# saveplots = True
+saveplots = False
 
 #########################################
 # Import probeset and galleryset images
@@ -174,8 +174,6 @@ if PART4a5 == True:
 	# Gender.txt contains list of male/female for each person
 	import pandas as pd
 	from sklearn.cluster import KMeans
-	from mpl_toolkits.mplot3d import Axes3D
-	from proj2_functions import create_cluster_arrays
 	from scipy.cluster.vq import kmeans2 as km2
 	from sklearn.metrics import f1_score
 	from jqmcvi.base import dunn_fast, davisbouldin
